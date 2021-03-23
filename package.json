@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-react-js-support",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "vite plugin support for react with .js file",
   "main": "index.js",
   "scripts": {
