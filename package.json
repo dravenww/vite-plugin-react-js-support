@@ -2,9 +2,10 @@
   "name": "vite-plugin-react-js-support",
   "version": "1.0.2",
   "description": "vite plugin support for react with .js file",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup src/index.js --file dist/index.js --format cjs"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
   "homepage": "https://github.com/dravenww/vite-plugin-react-js-support#readme",
   "dependencies": {
     "@babel/core": "^7.13.10"
+  },
+  "devDependencies": {
+    "rollup": "^2.42.3"
   }
 }
