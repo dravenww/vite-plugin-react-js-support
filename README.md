@@ -20,5 +20,19 @@ export default {
 }
 
 ```
+# 备注
+```
+// 对于vite预构建会报错的问题，需要把配置改下
+export default {
+  build: {
+    rollupOptions: {
+      input: [],
+    }
+  },
+  optimizeDeps: {
+    entries: false,
+  },
+}
+```
 
 还支持传入其他babel的plugin，数组类型。
