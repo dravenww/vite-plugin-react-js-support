@@ -15,7 +15,7 @@ yarn add vite-plugin-react-js-support
 import vitePlugin from 'vite-plugin-react-js-support';
 export default {
     plugins: [
-        vitePlugin(),
+        vitePlugin([], { jsxInject: true }),
     ]
 }
 
@@ -37,6 +37,15 @@ export default ({command, mode}) => {
     },
   }
 }
+```
+
+# 参数
+```
+// 之所以支持这个配置，是因为cra4版本以后在子文件中不会引入react；
+// 如果你的子文件已经引入了react，可以把这项设置为false;
+// 而且vite本身的jsxInject只对x(jsx|tsx)结尾的文件类型提供支持;
+// 默认会根据react大于等于17的版本，自动注入
+jsxInject: true, // 是否为js文件注入 import React from 'react';默认为true
 ```
 
 还支持传入其他babel的plugin，数组类型。
