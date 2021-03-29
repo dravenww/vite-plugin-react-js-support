@@ -5,7 +5,7 @@ const fileRegex = /\.js$/
 const version = require(cwd + '/node_modules/react/package.json').version;
 const greatThan17 = parseInt(version.split('.')[0]) >= 17;
 
-export default function vitePluginReactJsSupport(plugins, options) {
+function vitePluginReactJsSupport(plugins, options) {
   options = options ? options: {
     jsxInject: true,
   };
@@ -37,3 +37,5 @@ function compileFileToJS(source, plugins) {
   })
   return result.code;
 }
+
+module.exports = vitePluginReactJsSupport
